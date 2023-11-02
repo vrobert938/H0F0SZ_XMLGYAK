@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE orarend SYSTEM ".\VR_orarend.dtd">
+
+<orarend>
+	<ora id="M1" tipus="Előadás/Gyakorlat">
+		<targy>Mesterséges intelligencia alapok</targy>
+        <idopont>
+            <nap>2023.09.15</nap>
+            <tol>12:30</tol>
+            <ig>15:50</ig>
+        </idopont>
+		<helyszin>In/114</helyszin>
+		<oktato>Kunné Dr. Tamás Judit</oktato>
+		<szak>Mérnökinformatikus</szak>
+	</ora>
+	<ora id="X1" tipus="Előadás/Gyakorlat">
+		<targy>Adatkezelés XML-ben</targy>
+        <idopont>
+            <nap>2023.10.13</nap>
+            <tol>12:30</tol>
+            <ig>15:50</ig>
+        </idopont>
+		<helyszin>In/101</helyszin>
+		<oktato>Dr. Bednarik László</oktato>
+		<szak>Mérnökinformatikus</szak>
+	</ora>
+	<ora id="M2" tipus="Előadás/Gyakorlat">
+		<targy>Mesterséges intelligencia alapok</targy>
+        <idopont>
+            <nap>2023.10.20</nap>
+            <tol>16:00</tol>
+            <ig>19:20</ig>
+        </idopont>
+		<helyszin>In/15</helyszin>
+		<oktato>Kunné Dr. Tamás Judit</oktato>
+		<szak>Mérnökinformatikus</szak>
+	</ora>
+	<ora id="X2" tipus="Előadás/Gyakorlat">
+		<targy>Adatkezelés XML-ben</targy>
+        <idopont>
+            <nap>2023.11.03</nap>
+            <tol>12:30</tol>
+            <ig>15:50</ig>
+        </idopont>
+		<helyszin>In/101</helyszin>
+		<oktato>Dr. Bednarik László</oktato>
+		<szak>Mérnökinformatikus</szak>
+	</ora>
+	<ora id="M3" tipus="Előadás/Gyakorlat">
+		<targy>Mesterséges intelligencia alapok</targy>
+        <idopont>
+            <nap>2023.11.03</nap>
+            <tol>16:00</tol>
+            <ig>19:20</ig>
+        </idopont>
+		<helyszin>In/101</helyszin>
+		<oktato>Kunné Dr. Tamás Judit</oktato>
+		<szak>Mérnökinformatikus</szak>
+	</ora>
+	<ora id="X3" tipus="Előadás/Gyakorlat">
+		<targy>Adatkezelés XML-ben</targy>
+        <idopont>
+            <nap>2023.11.24</nap>
+            <tol>12:30</tol>
+            <ig>15:50</ig>
+        </idopont>
+		<helyszin>In/101</helyszin>
+		<oktato>Dr. Bednarik László</oktato>
+		<szak>Mérnökinformatikus</szak>
+	</ora>
+	<ora id="X2" tipus="Előadás/Gyakorlat">
+		<targy>Adatkezelés XML-ben</targy>
+        <idopont>
+            <nap>2023.12.08</nap>
+            <tol>12:30</tol>
+            <ig>15:50</ig>
+        </idopont>
+		<helyszin>In/101</helyszin>
+		<oktato>Dr. Bednarik László</oktato>
+		<szak>Mérnökinformatikus</szak>
+	</ora>	
+	<ora id="K0" tipus="Előadás/Gyakorlat">
+		<targy>Készítette</targy>
+        <idopont>
+            <nap>2023.11.02</nap>
+            <tol>12:30</tol>
+            <ig>15:50</ig>
+        </idopont>
+		<helyszin>HO</helyszin>
+		<oktato>Vékony Róbert</oktato>
+		<szak>Mérnökinformatikus</szak>
+	</ora>
+</orarend>
