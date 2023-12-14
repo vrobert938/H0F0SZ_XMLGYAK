@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<bajnoksag xmlns="XMLH0F0SZ">
+    <statisztika l_stat="l1" statisztikaID="stat1">
+        <jatekperc>300</jatekperc>
+        <lapok>
+            <sarga>10</sarga>
+            <piros>0</piros>
+        </lapok>
+        <gol>4</gol>
+        <golpassz>10</golpassz>
+    </statisztika>
+    <statisztika l_stat="l2" statisztikaID="stat2">
+        <jatekperc>200</jatekperc>
+        <lapok>
+            <sarga>11</sarga>
+            <piros>1</piros>
+        </lapok>
+        <gol>0</gol>
+        <golpassz>2</golpassz>
+    </statisztika>
+    <statisztika l_stat="l3" statisztikaID="stat3">
+        <jatekperc>400</jatekperc>
+        <lapok>
+            <sarga>0</sarga>
+            <piros>0</piros>
+        </lapok>
+        <gol>0</gol>
+        <golpassz>2</golpassz>
+    </statisztika>
+    <labdarugo l_stat="cs1" labdarugoID="l1">
+        <lnev>Callum Styles</lnev>
+        <kor>25</kor>
+        <poszt>CM</poszt>
+    </labdarugo>
+    <labdarugo l_stat="cs2" labdarugoID="l2">
+        <lnev>Sallai Roland</lnev>
+        <kor>25</kor>
+        <poszt>ST</poszt>
+    </labdarugo>
+    <labdarugo l_stat="cs3" labdarugoID="l3">
+        <lnev>Szoboszlai Dominik</lnev>
+        <kor>21</kor>
+        <poszt>CAM</poszt>
+    </labdarugo>
+    <csapat csapatID="cs1" l_stat="s1">
+        <csnev>Millwall</csnev>
+        <edzo>Kiss Pista</edzo>
+        <liga>Premier Leauge</liga>
+        <liga>Europe Leauge</liga>
+    </csapat>
+    <csapat csapatID="cs2" l_stat="s2">
+        <csnev>Freiburg</csnev>
+        <edzo>Nagy Janos</edzo>
+        <liga>Premier Leauge</liga>
+        <liga>Europe Leauge</liga>
+    </csapat>
+    <csapat csapatID="cs3" l_stat="s3">
+        <csnev>Leipzig</csnev>
+        <edzo>Kerek Elemer</edzo>
+        <liga>Premier Leauge</liga>
+        <liga>Europe Leauge</liga>
+    </csapat>
+    <merkozes merkozesID="m1" stad_m="s1">
+        <hazaigolok>0</hazaigolok>
+        <vendeggolok>2</vendeggolok>
+        <idopont>17:00</idopont>
+    </merkozes>
+    <merkozes merkozesID="m2" stad_m="s2">
+        <hazaigolok>1</hazaigolok>
+        <vendeggolok>1</vendeggolok>
+        <idopont>18:00</idopont>
+    </merkozes>
+    <merkozes merkozesID="m3" stad_m="s3">
+        <hazaigolok>3</hazaigolok>
+        <vendeggolok>2</vendeggolok>
+        <idopont>20:00</idopont>
+    </merkozes>
+    <stadion stadionID="s1">
+        <snev>Emirates Stadium</snev>
+        <cim>
+            <varos>London</varos>
+            <utca>Eper</utca>
+            <hazszam>12</hazszam>
+        </cim>
+        <ferohely>60000</ferohely>
+    </stadion>
+    <stadion stadionID="s2">
+        <snev>London Stadium</snev>
+        <cim>
+            <varos>London</varos>
+            <utca>Malna</utca>
+            <hazszam>12</hazszam>
+        </cim>
+        <ferohely>60000</ferohely>
+    </stadion>
+    <stadion stadionID="s3">
+        <snev>Etihad Stadium</snev>
+        <cim>
+            <varos>Manchester</varos>
+            <utca>Szilva</utca>
+            <hazszam>12</hazszam>
+        </cim>
+        <ferohely>60000</ferohely>
+    </stadion>
+    <jatszik cs_j="m1" m_j="cs1">
+        <pont>0</pont>
+    </jatszik>
+    <jatszik cs_j="m2" m_j="cs2">
+        <pont>1</pont>
+    </jatszik>
+    <jatszik cs_j="m3" m_j="cs3">
+        <pont>3</pont>
+    </jatszik>
+</bajnoksag>

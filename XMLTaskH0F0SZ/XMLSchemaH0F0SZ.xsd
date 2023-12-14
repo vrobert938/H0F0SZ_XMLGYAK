@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+	<!-- Sajat tipusok -->
+	<xs:element name="kor">
+		<xs:simpleType>
+			<xs:restriction base="xs:integer">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="100"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+
+	<xs:simpleType name="poszt">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="CAM" />
+            <xs:enumeration value="CB" />
+            <xs:enumeration value="ST" />
+			<xs:enumeration value="CDM" />
+			<xs:enumeration value="GK" />
+			<xs:enumeration value="CM" />
+			<xs:enumeration value="RM" />
+			<xs:enumeration value="LM" />
+			<xs:enumeration value="RW" />
+			<xs:enumeration value="LW" />
+        </xs:restriction>
+    </xs:simpleType>
+
+	<xs:simpleType name="pont">
+        <xs:restriction base="xs:integer">
+            <xs:enumeration value="0" />
+            <xs:enumeration value="1" />
+            <xs:enumeration value="3" />
+        </xs:restriction>
+    </xs:simpleType>
+
+	<!-- Felépítés -->
+	<xs:element name ="bajnoksag">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="statisztika">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element type="xs:integer" name="jatekperc" />
+							<xs:element name="lapok">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element type="xs:integer" name="sarga"/>
+										<xs:element type="xs:integer" name="piros"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element type="xs:integer" name="gol" />
+							<xs:element type="xs:integer" name="golpassz" />
+						</xs:sequence>
+						<xs:attribute type="xs:string" name="l_stat" use="required" />
+						<xs:attribute type="xs:string" name="statisztikaID" use="required" />
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="labdarugo">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element type="xs:string" name="lnev" />
+							<xs:element type="kor" name="kor" />
+							<xs:element type="poszt" name="poszt" />
+						</xs:sequence>
+						<xs:attribute type="xs:string" name="cs_l" use="required" />
+						<xs:attribute type="xs:string" name="labdarugoID" use="required" />
+    				</xs:complexType>
+				</xs:element>
+				<xs:element name="csapat">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element type="xs:string" name="csnev" />
+							<xs:element type="xs:string" name="edzo" />
+							<xs:element type="xs:string" name="liga" />
+						</xs:sequence>
+						<xs:attribute type="xs:string" name="stad_cs" use="required" />
+						<xs:attribute type="xs:string" name="csapatID" use="required" />
+    				</xs:complexType>
+				</xs:element>
+				<xs:element name="merkozes">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element type="xs:integer" name="hazaigolok" />
+							<xs:element type="xs:integer" name="vendeggolok" />
+							<xs:element type="xs:date" name="idopont" />
+						</xs:sequence>
+						<xs:attribute type="xs:string" name="stad_m" use="required" />
+						<xs:attribute type="xs:string" name="merkozesID" use="required" />
+    				</xs:complexType>
+				</xs:element>
+				<xs:element name="stadion">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element type="xs:string" name="snev" />
+							<xs:element name="cim">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element type="xs:string" name="varos"/>
+										<xs:element type="xs:string" name="utca"/>
+										<xs:element type="xs:integer" name="hazszam"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element type="xs:integer" name="ferohely" />
+						</xs:sequence>
+						<xs:attribute type="xs:string" name="stadionID" use="required" />
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="jatszik">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element type="pont" name="pont" />
+						</xs:sequence>
+						<xs:attribute type="xs:string" name="cs_j" use="required" />
+						<xs:attribute type="xs:string" name="m_j" use="required" />
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+
+		<!-- Kulcsok -->
+
+		<xs:key name ="statisztika_kulcs">
+			<xs:selector xpath="statisztika"/>
+			<xs:field xpath = "@statisztikaID" />
+		</xs:key>
+		
+		<xs:key name = "labdarugo_kulcs">
+			<xs:selector xpath="labdarugo"/>
+			<xs:field xpath = "@labdarugoID" />
+		</xs:key>
+		
+		<xs:key name ="csapat_kulcs">
+			<xs:selector xpath="csapat"/>
+			<xs:field xpath = "@csapatID" />
+		</xs:key>
+		
+		<xs:key name ="merkozes_kulcs">
+			<xs:selector xpath="merkozes"/>
+			<xs:field xpath = "@merkozesID" />
+		</xs:key>
+		
+		<xs:key name ="stadion_kulcs">
+			<xs:selector xpath="stadion"/>
+			<xs:field xpath = "@stadionID" />
+		</xs:key>
+
+		<!-- Idegen kulcsok -->
+		
+		<xs:keyref refer = "labdarugo_kulcs" name ="labdarugo_idegen_kulcs">
+			<xs:selector xpath ="statisztika" />
+			<xs:field xpath ="@l_stat" />
+		</xs:keyref>
+		
+		<xs:keyref refer = "csapat_kulcs" name ="csapat_idegen_kulcs">
+			<xs:selector xpath ="labdarugo" />
+			<xs:field xpath ="@cs_l" />
+		</xs:keyref>
+		
+		<xs:keyref refer = "stadion_kulcs" name ="stadion_csapat_idegen_kulcs">
+			<xs:selector xpath ="csapat" />
+			<xs:field xpath ="@stad_cs" />
+		</xs:keyref>
+
+        <xs:keyref refer = "stadion_kulcs" name ="stadion_csapat_idegen_kulcs">
+			<xs:selector xpath ="merkozes" />
+			<xs:field xpath ="@stad_m" />
+		</xs:keyref>
+
+        <xs:keyref refer = "csapat_kulcs" name ="csapat_jatszik_idegen_kulcs">
+			<xs:selector xpath ="jatszik" />
+			<xs:field xpath ="@cs_j" />
+		</xs:keyref>
+
+        <xs:keyref refer = "merkozes_kulcs" name ="merkozes_jatszik_idegen_kulcs">
+			<xs:selector xpath ="jatszik" />
+			<xs:field xpath ="@m_j" />
+		</xs:keyref>
+	</xs:element>
+
+	<xs:unique name="unique_stadion_csapat">
+            <xs:selector xpath="csapat" />
+            <xs:field xpath="@stad_cs" />
+    </xs:unique>
+
+
+</xs:schema>

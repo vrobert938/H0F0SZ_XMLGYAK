@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<bajnoksag xmlns:xsi="">
+
+    <!-- Statisztikák -->
+    <statisztika statiszikaID="stat1" l_stat="l1">
+        <jatekperc>300</jatekperc>
+        <lapok>
+            <sarga>4</sarga>
+            <piros>0</piros>
+        </lapok>
+        <gol>4</gol>
+        <golpassz>5</golpassz>
+    </statisztika>
+
+    <statisztika statiszikaID="stat2" l_stat="l2">
+        <jatekperc>1000</jatekperc>
+        <lapok>
+            <sarga>2</sarga>
+            <piros>0</piros>
+        </lapok>
+        <gol>10</gol>
+        <golpassz>13</golpassz>
+    </statisztika>
+
+    <statisztika statiszikaID="stat3" l_stat="l3">
+        <jatekperc>600</jatekperc>
+        <lapok>
+            <sarga>10</sarga>
+            <piros>1</piros>
+        </lapok>
+        <gol>1</gol>
+        <golpassz>0</golpassz>
+    </statisztika>
+
+    <!-- Labdarúgók -->
+    <labdarugo labdarugoID="l1" cs_l="cs1">
+        <lnev>James Maddison</lnev>
+        <kor>22</kor>
+        <poszt>CAM</poszt>
+    </labdarugo>
+
+    <labdarugo labdarugoID="l2" cs_l="cs2">
+        <lnev>Gabriel Jesus</lnev>
+        <kor>24</kor>
+        <poszt>ST</poszt>
+    </labdarugo>
+
+    <labdarugo labdarugoID="l3" cs_l="cs3">
+        <lnev>Ruben Dias</lnev>
+        <kor>26</kor>
+        <poszt>CB</poszt>
+    </labdarugo>
+
+    <!-- Csapatok -->
+    <csapat csapatID="cs1" stad_cs="s1">
+        <csnev>Leicester City</csnev>
+        <edzo>Jose Murinho</edzo>
+        <liga>Premier Leauge</liga>
+        <liga>Europe Leauge</liga>
+    </csapat>
+
+    <csapat csapatID="cs2" stad_cs="s2">
+        <csnev>Arsenal</csnev>
+        <edzo>Mikel Arteta</edzo>
+        <liga>Premier Leauge</liga>
+        <liga>Europe Leauge</liga>
+    </csapat>
+
+    <csapat csapatID="cs3" stad_cs="s3">
+        <csnev>Manchester City</csnev>
+        <edzo>Pep Guardiola</edzo>
+        <liga>Premier Leauge</liga>
+        <liga>Champions Leauge</liga>
+    </csapat>
+
+    <!-- Merkőzések -->
+    <merkozes merkozesID="m1" stad_m="s1">
+        <hazaigolok>2</hazaigolok>
+        <vendeggolok>0</vendeggolok>
+        <idopont>2022/10/20 18:00</idopont>
+    </merkozes>
+
+    <merkozes merkozesID="m2" stad_m="s2">
+        <hazaigolok>0</hazaigolok>
+        <vendeggolok>0</vendeggolok>
+        <idopont>2022/09/12 20:00</idopont>
+    </merkozes>
+
+    <merkozes merkozesID="m3" stad_m="s2">
+        <hazaigolok>1</hazaigolok>
+        <vendeggolok>2</vendeggolok>
+        <idopont>2022/09/30 21:00</idopont>
+    </merkozes>
+
+    <!-- Stadionok -->
+    <stadion stadionID="s1">
+        <snev>King Power</snev>
+        <cim>
+            <varos>Leicester</varos>
+            <utca>Eper utca</utca>
+            <hazszam>12</hazszam>
+        </cim>
+        <ferohely>40000</ferohely>
+    </stadion>
+
+    <stadion stadionID="s2">
+        <snev>Emirates Stadium</snev>
+        <cim>
+            <varos>London</varos>
+            <utca>Kakas utca</utca>
+            <hazszam>30</hazszam>
+        </cim>
+        <ferohely>80000</ferohely>
+    </stadion>
+
+    <stadion stadionID="s3">
+        <snev>Etihad</snev>
+        <cim>
+            <varos>Manchester</varos>
+            <utca>Kossuth utca</utca>
+            <hazszam>16</hazszam>
+        </cim>
+        <ferohely>60000</ferohely>
+    </stadion>
+
+    <!-- Mérkőzésen játszó csapatok -->
+    <jatszik cs_j="cs1" m_j="m1">
+        <pont>0</pont>
+    </jatszik>
+
+    <jatszik cs_j="cs2" m_j="m1">
+        <pont>3</pont>
+    </jatszik>
+
+    <jatszik cs_j="cs3" m_j="m2">
+        <pont>1</pont>
+    </jatszik>
+
+    <jatszik cs_j="cs1" m_j="m2">
+        <pont>1</pont>
+    </jatszik>
+
+    <jatszik cs_j="cs2" m_j="m3">
+        <pont>0</pont>
+    </jatszik>
+
+    <jatszik cs_j="cs3" m_j="m3">
+        <pont>3</pont>
+    </jatszik>
+</bajnoksag>
