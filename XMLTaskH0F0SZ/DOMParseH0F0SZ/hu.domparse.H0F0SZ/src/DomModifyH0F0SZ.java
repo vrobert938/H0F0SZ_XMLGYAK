@@ -31,12 +31,10 @@ public class DomModifyH0F0SZ {
 
             for (int i = 0; i < statList.getLength(); i++) {
                 Node node = statList.item(i);
-
                 if (node.getNodeType() == Node.ELEMENT_NODE) {
                     Element eElement = (Element) node;
 
                     if ("jatekperc".equals(eElement.getNodeName())) {
-
                         eElement.setTextContent("300");
                     }
                 }
@@ -48,10 +46,8 @@ public class DomModifyH0F0SZ {
 
             for (int i = 0; i < stadlist.getLength(); i++) {
                 Node node = stadlist.item(i);
-
                 if (node.getNodeType() == Node.ELEMENT_NODE) {
                     Element eElement = (Element) node;
-
                     if ("ferohely".equals(eElement.getNodeName())) {
                         if ("65000".equals(eElement.getTextContent())) {
                             eElement.setTextContent("60000");
@@ -69,10 +65,8 @@ public class DomModifyH0F0SZ {
 
             for (int i = 0; i < merklist.getLength(); i++) {
                 Node node = merklist.item(i);
-
                 if (node.getNodeType() == Node.ELEMENT_NODE) {
                     Element eElement = (Element) node;
-
                     if ("hazaigolok".equals(eElement.getNodeName())) {
                         if ("3".equals(eElement.getTextContent())) {
                             eElement.setTextContent("2");

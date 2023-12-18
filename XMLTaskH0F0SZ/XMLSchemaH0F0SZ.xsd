@@ -121,7 +121,6 @@
 		</xs:complexType>
 
 		<!-- Kulcsok -->
-
 		<xs:key name ="statisztika_kulcs">
 			<xs:selector xpath="statisztika"/>
 			<xs:field xpath = "@statisztikaID" />
